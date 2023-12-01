@@ -4,15 +4,11 @@
 @tailwind utilities;
 
 img {
-  @apply rounded-md hover:brightness-90 transition-all duration-150 ease-linear shadow-md;
+  @apply  hover:brightness-90 transition-all duration-150 ease-linear shadow-md;
 }
 
 
-*{
-font-family: 'Roboto', sans-serif;
 
-
-}
 :root {
   --aero: #61b3d6ff;
   --auburn: rgb(180, 46, 41);
@@ -22,7 +18,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 body{
-  background-color: var(--night);
+  background-color:white;
+  color: black;
 }
 
 

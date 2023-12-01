@@ -3,17 +3,12 @@ import Hero from '../components/Hero.vue'
 </script>
 
 <template>
-  <div class="flex flex-col space-y-10 lg:space-y-20  lg:mt-0  ">
+  <div class="flex flex-col  ">
     <Hero />
-    <ProblemSolution />
-    <Features />
-    <CallToActionTwo />
+    <BusinessHours />
     <Benefits />
-    <About />
-    <PricingPlan />
-    <Testimonials />
-    <FAQ />
-    <CallToActionThree />
+    <Coffee/>
+    <ContactForm/>
   </div>
 </template>
 

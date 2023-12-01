@@ -1,26 +1,5 @@
 <script setup lang="ts">
-const benefits = [
-  {
-      title: 'Year-Round Installation Expertise',
-    content: 'Trust our skilled team for seamless installation of furnaces, air conditioners, ductless systems, and more.',
-    icon: 'meteocons:clear-day-fill', // Replace with a general installation icon URL
-    image: 'https://images.unsplash.com/photo-1640087975859-f2e7a8d09634?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-     title: 'Efficient Cooling Solutions',
-    content: 'Stay cool and relaxed with our advanced air conditioning systems designed for maximum efficiency and performance.',
-    icon: 'meteocons:snowflake-fill', // Replace with appropriate air conditioner icon URL
-    image: 'https://images.unsplash.com/photo-1465224414649-ceb7f1db3999?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-
-  {
-    title: 'Enhance Comfort All Year',
-    content: 'Upgrade your living spaces with top-notch HVAC solutions, ensuring optimal comfort throughout the seasons.',
-    icon: 'meteocons:wind', // Replace with appropriate furnace icon URL
-    image: 'https://images.unsplash.com/photo-1511256094521-c1cf19529095?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-
-];
+import Button from './Globals/Button.vue'
 
 
 
@@ -29,39 +8,81 @@ const benefits = [
 </script>
 
 <template>
-  <main class=" space-y-10 px-10 relative ">
-  <SectionHeaderCenter header="Our Benefits" title="Why Choose Us?" content="We are a team of passionate and dedicated professionals who are committed to delivering exceptional results. We are here to help you achieve your goals and elevate your online presence." />
-    <section v-for="(benefit, index) in benefits" :key="benefit.title" v-motion-fade-visible
-      class=" flex flex-col space-y-4  ">
-      <div class="lg:flex  space-y-4 lg:space-y-0 lg:mt-10 mt-5 ">
-        <div :class="index % 2 === 0 ? ' order-1' : ' order-0'"
-          class="flex   cool-img  lg:w-1/2 h-[300px]  lg:h-[700px]   rounded-se-3xl rounded-es-3xl shadow-xl"
-          :style="{ backgroundImage: `url('${benefit.image}')` }">
+  <main class="  relative ">
+  
+    <div class="flex w-full">
+      <div class="w-1/2 card-img-background">
+        <div class="px-2 py-10 rounded-md shadow-2xl bg-white text-black">
+          <h3 class="text-6xl font-bold mb-2 text-center uppercase font-serif">Our Menu</h3>
+          <p class=" p-10 text-center leading-loose"><strong>@Café Yun</strong>             customers can expect a culinary experience where every dish is meticulously crafted using top-quality ingredients, prepared to order. Our service strikes the perfect balance between personalized attention and a professional touch, all within vibrant and welcoming settings.</p>
+
+          <div class="flex flex-col items-center justify-center space-y-4">
+            <Button class="bg-emerald-400 shadow-xl hover:shadow-2xl transition-all !duration-300 uppercase">
+             Order Online
+            </Button>
+              <Button class="bg-emerald-400 shadow-xl hover:shadow-2xl transition-all !duration-300 uppercase">
+              View Menu
+              </Button>
+          </div>
         </div>
-        <article :class="index % 2 === 1 ? ' order-1' : ' order-0'"
-          class=" flex lg:w-1/2 flex-col space-y-6 items-center justify-center  lg:p-10 p-4 ">
-          <Icon :name="benefit.icon" class="text-9xl" />
-          <h1 class="mb-0  text-2xl lg:text-5xl font-bold  ">
-            {{ benefit.title }}
-          </h1>
-          <p class="p-4  text-xl lg:text-2xl ">
-            {{ benefit.content }}
-          </p>
-        </article>
       </div>
-    </section>
+      <div class="w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1592663527359-cf6642f54cff?q=80&w=1319&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" class="">
+      </div>
+    </div>
+    <div class="flex w-full">
+      <div class="w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1583527825770-8bd0bfb1f1c1?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" class="">
+      </div>
+      <div class="w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1534432182912-63863115e106?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" class="">
+      </div>
+    </div>
+    <div class="flex w-full">
+      <div class="w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1609590981063-d495e2914ce4?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" class="">
+      </div>
+        <div class="w-1/2 card-img-background">
+          <div class="px-2 py-10 rounded-md shadow-2xl bg-white text-black">
+            <h3 class="text-6xl font-bold mb-2 text-center uppercase font-serif">We Cater</h3>
+            <p class=" p-10 text-center leading-loose"><strong>Café Yun</strong> is delighted to extend an invitation to cater your upcoming event, whether it's a festive party, a crucial business meeting, or a corporate gathering. Our culinary expertise ensures a delightful experience for your guests. Discover the perfect blend of convenience and gourmet indulgence with Café Yun catering services—because every event deserves a touch of extraordinary taste.</p>
+
+            <div class="flex flex-col items-center justify-center space-y-4">
+              <Button class="bg-emerald-400 shadow-xl hover:shadow-2xl transition-all !duration-300 uppercase">
+             Inquire Now
+              </Button>
+            
+            </div>
+          </div>
+        </div>
+    </div>
   </main>
 </template>
 
 <style scoped>
-.cool-img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card-img-background {
+  @apply bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center p-20;
+
+  background-image: url("https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
   @media screen and (max-width: 768px) {
- 
-    background-attachment: scroll;
+
+    @apply bg-scroll
   }
 }
 </style>
