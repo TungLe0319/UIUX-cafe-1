@@ -5,6 +5,7 @@
 
 img {
   @apply  hover:brightness-90 transition-all duration-150 ease-linear shadow-md;
+  
 }
 
 
